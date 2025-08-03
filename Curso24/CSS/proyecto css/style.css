@@ -10,11 +10,19 @@
     "wdth" 100;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 .menu-nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
+    position: sticky;
+    top: 10px;
+    background-color: #fff;
 }
 
 .hidden-logo {
@@ -38,10 +46,12 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
 .logo {
     display: flex;
     align-items: center;
 }
+
 .pic-first {
     width: 63px;
     height: 25px;
@@ -69,6 +79,7 @@
     border-right: 0px;
     padding-left: 20px;
     font-size: 16px;
+    margin-left: 32px;
 }
 
 .search-bar input:focus{
@@ -166,7 +177,10 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 25px;
-    font-size: 20px;   
+    font-size: 20px;
+    position: sticky;
+    top: 65px;
+    height: 0;   
 }
 
 .short-btn {
@@ -193,6 +207,10 @@ main {
     justify-content: space-between;
     padding-left: 20px;
     width: 94vw;
+    position: sticky;
+    top: 65px;
+    background-color: #fff;
+    padding-bottom: 10px;
 }
 
 .category {
@@ -275,7 +293,7 @@ main {
 
 .profile-pic {
     display: flex;
-    padding: 5px 2px 3px 0px;
+    padding: 12px 2px 3px 0px;
     height: 66px;
     width: 36px;
     border-radius: 50%;
@@ -285,27 +303,59 @@ main {
     height: 36px;
     width: 100%;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .info-video {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    width: 100%;
 }
 
 .title-video {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.title-video p {
+    display: flex;
+    text-align: start;
     font-size: 16px;
     color: #0f0f0f;
     font-size: bold;
+    cursor: pointer;
+}
+
+.point-setting-profile i{
+    font-size: 14px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point-setting-profile i:hover{
+    background-color: #ccc8c8;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .channel-name {
     font-size: 14px;
     color: #606060;
+    cursor: pointer;
+}
+
+.channel-name:hover {
+    color: #464545;
 }
 
 .info-channel {
     font-size: 14px;
     color: #606060;
+    cursor: pointer;
 }
 
 
