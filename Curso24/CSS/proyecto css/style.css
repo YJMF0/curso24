@@ -205,7 +205,8 @@ main {
 .category-container {
     display: flex;
     justify-content: space-between;
-    padding-left: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     width: 94vw;
     position: sticky;
     top: 65px;
@@ -237,9 +238,9 @@ main {
 
 .category-next {
     position: absolute;
-    right: 12px;
-    top: 75px;
-    background-color: #eeeded;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
     padding: 6px;
     border-radius: 70%;
     cursor: pointer;
@@ -248,6 +249,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #787575b4;
 }
 
 .category-next:hover {
@@ -302,7 +304,7 @@ main {
 .pic {
     height: 36px;
     width: 100%;
-    border-radius: 100%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
