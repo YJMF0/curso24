@@ -1,0 +1,100 @@
+/* Tarea Crear una pagina web con un formulario que permita elegir entre un rago de precios de un producto y definir pseudo clases para rangos validos e invalidos en un rango de 1 a 10 */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #9f9e9e;
+    --radius: 25px;
+    --border: 2px solid #000;
+}
+
+.menu {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 10px 30px;
+}
+
+.container {
+    width: 50vw;
+    background-color: var(--background-color);
+    padding: 10px;
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+.main-title {
+    text-align: center;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.container ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50vw;
+    background-color: var(--background-color);
+    padding: 10px;
+    border: var(--border);
+    border-radius: var(--radius);
+}
+
+section input {
+    width: 30vw;
+    background-color: #fff;
+}
+
+.btn {
+    width: 70px;
+}  
+
+.btn:hover{
+    background-color: #6bc4ff;
+}
+
+input[type="reset"] {
+    width: 100px;
+}
+
+.min:invalid {
+    background-color: rgb(245, 245, 245);
+}
+
+.min:valid {
+    background-color: rgba(0, 128, 0, 0.37);
+    color: #fff;
+}
+
+.max:invalid {
+    background-color: rgb(245, 245, 245);
+}
+
+.max:valid {
+    background-color: rgba(0, 128, 0, 0.37);
+    color: #fff;
+}
