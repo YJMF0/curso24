@@ -5,15 +5,15 @@ $secondary-color: #82b7f3
 $secondary-color-hover: #9f0bcc
 $text-color: #bdb7b7
 $font-size: 16px
-$all-margin: 5px
+$all-margin: 10px
 $all-padding: 10px
 $border-radius: 15px
 $general-color-button:#f1abf1
 
 @mixin button-container-style
     display: flex
-    gap: 10px
-    justify-content: space-around
+    gap: 25px
+    justify-content: center
     align-items: center
     padding: $all-padding
 
@@ -28,8 +28,8 @@ $general-color-button:#f1abf1
 
 @mixin display($quantity: 2)
     display: grid
-    grid-template-columns: repeat($quantity, 1fr)
-    justify-content: space-between
+    grid-template-columns: repeat($quantity, 350px)
+    justify-content: center
     padding: 20px 0px
     gap: 10px
     height: 60vh
@@ -78,6 +78,10 @@ body
         padding: $all-padding
         background-color: #666464
         filter: blur(5px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 15px
         &:hover
             background-color: $secondary-color-hover
             filter: blur(0)
@@ -88,10 +92,11 @@ body
 
 .cardContainer_box_content
     @include display-card
-    padding-top: 15px
+    padding-top: 15px 0px
     &_title--large
         font-size: 18px
         text-decoration: underline
+        margin-top: $all-margin
         &:hover
             font-size: 22px
     &_text--medium
@@ -103,6 +108,7 @@ body
         display: flex
         align-items: center
         justify-content: center
+        margin-bottom: $all-margin
         &:hover
             font-size: 14px
             

@@ -12,8 +12,8 @@ body {
 
 .btnContainer {
   display: flex;
-  gap: 10px;
-  justify-content: space-around;
+  gap: 25px;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
@@ -33,8 +33,8 @@ body {
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
+  grid-template-columns: repeat(2, 350px);
+  justify-content: center;
   padding: 20px 0px;
   gap: 10px;
   height: 60vh;
@@ -45,6 +45,10 @@ body {
   padding: 10px;
   background-color: #666464;
   filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 .cardContainer_box:hover {
   background-color: #9f0bcc;
@@ -64,11 +68,12 @@ body {
   place-items: center;
   gap: 5px;
   height: 25dvh;
-  padding-top: 15px;
+  padding-top: 15px 0px;
 }
 .cardContainer_box_content_title--large {
   font-size: 18px;
   text-decoration: underline;
+  margin-top: 10px;
 }
 .cardContainer_box_content_title--large:hover {
   font-size: 22px;
@@ -84,6 +89,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 .cardContainer_box_content_footer--small:hover {
   font-size: 14px;
@@ -91,8 +97,8 @@ body {
 
 .btnContainer_down {
   display: flex;
-  gap: 10px;
-  justify-content: space-around;
+  gap: 25px;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
