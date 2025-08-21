@@ -1,0 +1,31 @@
+$base-color: #def702
+    
+    
+@mixin display()
+    display: flex
+    place-content: center
+    place-items: center
+    width: 100px
+    height: 100px  
+
+@function set-transparency($color, $level)    
+    @return rgba($color, $level)  
+    
+.container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 10px
+    place-items: center
+    place-content: center
+    &_item1
+        @include display
+        background: set-transparency($base-color, 0.5) 
+    &_item2
+        @include display 
+        background: set-transparency(#08f5c2, 0.2)
+    &_item3
+        @include display 
+        background: set-transparency(#e63535, 0.8)    
+    &_item4
+        @include display     
+        background: set-transparency(#cd17f1, 0.3)

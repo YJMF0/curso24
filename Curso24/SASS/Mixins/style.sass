@@ -1,0 +1,69 @@
+//Esto sera mi variable para el color principal
+
+$color-principal: #261b44;
+$fuente-principal: 'Helvetica', sans-serif;
+
+@mixin display-flex-center()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin display-grid-center-column($quantity: 1, $gap: 20px)
+    display: grid
+    grid-template-columns: repeat($quantity, 1fr)
+    gap: $gap
+    
+
+*  
+    margin: 0
+    padding: 0
+
+body
+    background-color: $color-principal;
+    color: white;
+    font-family: $fuente-principal;
+    font-size: 16px;
+    text-align: center;
+    .headerContainer
+        @include display-flex-center
+        padding: 20px 0px
+        width: 100dvw
+        &_nav
+            display: flex
+            justify-content: space-between
+            gap: 20px
+            width: 100dvw
+            align-items: center
+            padding: 0px 20px 
+            cursor: pointer          
+            &_logo
+                &_img
+                    width: 120px
+                    height: 55px
+    .headerContainer_nav
+        &_menu
+            display: flex
+            gap: 15px
+            &_list
+                list-style: none
+                display: flex
+                gap: 15px
+                &_item
+                    color: white
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline          
+    .btn
+        background-color: #58a6ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px
+
+    .grid
+        @include display-grid-center-column(2,200px)
+        
+        
+/*Esto es un comentario */

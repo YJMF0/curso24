@@ -1,0 +1,140 @@
+// Variables
+
+$primary-color: #e65f5f
+$secondary-color: #82b7f3
+$secondary-color-hover: #9f0bcc
+$text-color: #bdb7b7
+$font-size: 16px
+$all-margin: 5px
+$all-padding: 10px
+$border-radius: 15px
+$general-color-button:#f1abf1
+
+@mixin button-container-style
+    display: flex
+    gap: 10px
+    justify-content: space-around
+    align-items: center
+    padding: $all-padding
+
+@mixin button-general-style
+    color: #ffffff
+    background-color: $general-color-button
+    border-radius: $border-radius
+    font-size: $font-size
+    padding: $all-padding
+    width: 120px
+    height: 35px   
+
+@mixin display($quantity: 2)
+    display: grid
+    grid-template-columns: repeat($quantity, 1fr)
+    justify-content: space-between
+    padding: 20px 0px
+    gap: 10px
+    height: 60vh
+
+@mixin img-size
+    width: 250px
+    height: 200px
+    border-radius: $border-radius
+
+@mixin display-card
+    display: grid
+    grid-template-rows: 5% 90% 5%
+    place-content: space-between
+    place-items: center
+    gap: 5px
+    height: 25dvh
+    
+
+
+//Estilos bases
+*
+    padding: 0
+    margin: 0
+    font-family: 'Arial', sans-serif
+    color: #fff
+
+body
+    background-color: #666464
+    padding: 20px
+
+//Botones superiores
+.btnContainer
+    @include button-container-style
+    .btnContainer_up
+        @include button-general-style
+        &:hover
+            background-color: $secondary-color-hover
+            font-size: 18px
+
+//Tarjetas
+.cardContainer
+    @include display
+    &_box
+        border: 2px solid #fff
+        border-radius: $border-radius
+        padding: $all-padding
+        background-color: #666464
+        filter: blur(5px)
+        &:hover
+            background-color: $secondary-color-hover
+            filter: blur(0)
+
+.cardContainer_img
+    @include img-size
+    
+
+.cardContainer_box_content
+    @include display-card
+    padding-top: 15px
+    &_title--large
+        font-size: 18px
+        text-decoration: underline
+        &:hover
+            font-size: 22px
+    &_text--medium
+        font-size: $font-size
+        &:hover
+            font-size: 18px
+    &_footer--small
+        font-size: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover
+            font-size: 14px
+            
+        
+
+//Botones inferiores
+.btnContainer_down
+    @include button-container-style
+    &_one--success
+        @include button-general-style
+        &:hover
+            background-color: $secondary-color-hover
+            font-size: 18px
+        &:focus
+            background-color: #a0f5a4
+    &_two--warning
+        @extend .btnContainer_down_one--success
+        &:hover
+            background-color: $secondary-color-hover
+            font-size: 18px
+        &:focus
+            background-color: $primary-color
+    &_three--primary
+        @include button-general-style
+        &:hover
+            background-color: $primary-color
+    &_four--secondary
+        @include button-general-style
+        &:hover
+            background-color: $secondary-color
+        
+
+
+    
+    

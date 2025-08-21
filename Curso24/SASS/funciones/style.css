@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  place-items: center;
+  place-content: center;
+}
+.container_item1 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(222, 247, 2, 0.5);
+}
+.container_item2 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(8, 245, 194, 0.2);
+}
+.container_item3 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(230, 53, 53, 0.8);
+}
+.container_item4 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(205, 23, 241, 0.3);
+}/*# sourceMappingURL=style.css.map */
